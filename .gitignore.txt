@@ -1,0 +1,20 @@
+# Ignore Visual Studio temporary files, build results, and
+# folder settings
+.vs/
+*.user
+*.suo
+*.dbmdl
+*.opendb
+*.obj
+*.exe
+*.dll
+*.cache
+*.pdb
+*.log
+
+# Ignore build output directories
+bin/
+obj/
+
+# Ignore node_modules if you're using npm/yarn for frontend
+node_modules/
