@@ -1,9 +1,41 @@
+using Microsoft.EntityFrameworkCore;
+using TouristAgency;
+using TouristAgency.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+// dodaj seed
+builder.Services.AddTransient<Seed>();
+// uvedi bazu ovde
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase"));
+});
 
 var app = builder.Build();
+
+// nakon dodavanja builder seed dodaj ovo, popunjava bazu podataka pocetnim podacima
+// proverava argumente pri pokretanju programa
+if (args.Length == 1 && args[0].ToLower() == "seeddata")
+    SeedData(app);
+
+                // iHost da bi se dobio pristup bp
+void SeedData(IHost app) 
+{   // uzima servis za kreiranje scopa (rad s servisima koji imaju kratak vek trajanja npr bp)
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope()) 
+    {   // dohvati seed koji popunjava pocetnim podacima
+        var service = scope.ServiceProvider.GetService<Seed>();
+        // pozovi popunjavanje
+        service.SeedDataContext();
+    }
+}
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -19,6 +51,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 
 app.MapRazorPages();
 
