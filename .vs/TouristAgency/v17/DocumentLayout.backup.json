@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\touristpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\touristpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\tourist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\tourist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\touristpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\touristpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|solutionrelative:touristagency\\model\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1D46338D-D508-43BA-8E2B-F94BDAC11A5B}|TouristAgency\\TouristAgency.csproj|d:\\materijali_i_projekti_za_faks\\samostalni_projekti\\touristagency\\touristagency\\model\\trip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,37 +82,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Organizer.cs",
-              "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Organizer.cs",
-              "RelativeDocumentMoniker": "TouristAgency\\Model\\Organizer.cs",
-              "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Organizer.cs",
-              "RelativeToolTip": "TouristAgency\\Model\\Organizer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "TouristAgency\\Model\\PaymentMethod.cs",
+              "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\PaymentMethod.cs",
+              "RelativeToolTip": "TouristAgency\\Model\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:28:23.116Z",
+              "WhenOpened": "2025-01-15T18:55:58.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ReservationStatus.cs",
+              "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\ReservationStatus.cs",
+              "RelativeDocumentMoniker": "TouristAgency\\Model\\ReservationStatus.cs",
+              "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\ReservationStatus.cs",
+              "RelativeToolTip": "TouristAgency\\Model\\ReservationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T18:22:42.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Reservation.cs",
+              "RelativeDocumentMoniker": "TouristAgency\\Model\\Reservation.cs",
+              "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Reservation.cs",
+              "RelativeToolTip": "TouristAgency\\Model\\Reservation.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T18:18:22.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Tourist.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Tourist.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\Tourist.cs",
               "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Tourist.cs",
               "RelativeToolTip": "TouristAgency\\Model\\Tourist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T14:25:51.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Trip.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Trip.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\Trip.cs",
@@ -108,12 +146,11 @@
               "RelativeToolTip": "TouristAgency\\Model\\Trip.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:24:02.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T14:24:02.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Destination.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Destination.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\Destination.cs",
@@ -121,12 +158,11 @@
               "RelativeToolTip": "TouristAgency\\Model\\Destination.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:21:13.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T14:21:13.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Category.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\Category.cs",
@@ -134,25 +170,24 @@
               "RelativeToolTip": "TouristAgency\\Model\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T14:19:52.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T14:19:52.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "TouristPackage.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\TouristPackage.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\TouristPackage.cs",
               "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\TouristPackage.cs",
               "RelativeToolTip": "TouristAgency\\Model\\TouristPackage.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-14T14:08:03.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Role.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\Role.cs",
@@ -165,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\User.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Model\\User.cs",
@@ -178,20 +213,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TouristAgency",
+              "DocumentIndex": 7,
+              "Title": "Organizer.cs",
+              "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Organizer.cs",
+              "RelativeDocumentMoniker": "TouristAgency\\Model\\Organizer.cs",
+              "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Model\\Organizer.cs",
+              "RelativeToolTip": "TouristAgency\\Model\\Organizer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T14:28:23.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TouristAgency.csproj",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\TouristAgency.csproj",
               "RelativeDocumentMoniker": "TouristAgency\\TouristAgency.csproj",
               "ToolTip": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\TouristAgency.csproj",
               "RelativeToolTip": "TouristAgency\\TouristAgency.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-14T13:42:22.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T13:42:22.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Seed.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Seed.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Seed.cs",
@@ -199,12 +245,11 @@
               "RelativeToolTip": "TouristAgency\\Seed.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T11:29:45.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T11:29:45.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "DataContext.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Data\\DataContext.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Data\\DataContext.cs",
@@ -212,12 +257,11 @@
               "RelativeToolTip": "TouristAgency\\Data\\DataContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T11:14:17.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-14T11:14:17.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\appsettings.json",
               "RelativeDocumentMoniker": "TouristAgency\\appsettings.json",
@@ -225,12 +269,11 @@
               "RelativeToolTip": "TouristAgency\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-13T19:07:01.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T19:07:01.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\appsettings.Development.json",
               "RelativeDocumentMoniker": "TouristAgency\\appsettings.Development.json",
@@ -238,12 +281,11 @@
               "RelativeToolTip": "TouristAgency\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-13T19:06:50.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T19:06:50.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Program.cs",
               "RelativeDocumentMoniker": "TouristAgency\\Program.cs",
@@ -251,12 +293,11 @@
               "RelativeToolTip": "TouristAgency\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T17:47:04.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T17:47:04.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Materijali_i_projekti_za_faks\\samostalni_projekti\\TouristAgency\\TouristAgency\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "TouristAgency\\Pages\\Index.cshtml",

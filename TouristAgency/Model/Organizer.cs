@@ -2,6 +2,6 @@
 {
     public class Organizer : User
     {
-        public List<TouristPackage> PostedPackages { get; set; } = new List<TouristPackage>();
+        public ICollection<TouristPackage> touristPackages { get; set; }
     }
 }

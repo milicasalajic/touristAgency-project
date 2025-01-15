@@ -16,10 +16,10 @@
         public string PriceDoesNotIncludes { get; set; }
         public Category Category { get; set; }
         public Destination Destination { get; set; }
-        public List<Trip> Trips{ get; set; } = new List<Trip>();
+        public ICollection<Trip> Trips { get; set; }
         public Organizer Organizer { get; set; }
-        public List<Tourist> Tourists { get; set; } = new List<Tourist>();
-
+        public ICollection<Tourist> Tourists { get; set; }
+        public Reservation Reservation { get; set; }
 
 
 

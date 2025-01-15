@@ -6,7 +6,7 @@ namespace TouristAgency.Model
     {
         public int Id { get; set; }
         public TouristPackage TouristPackage { get; set; }
-        public User User { get; set; }
+        public Tourist Tourist { get; set; }
         public int NumberOfTourists { get; set; }
         public DateTime ReservationDate { get; set; }
         public double Price { get; set; }

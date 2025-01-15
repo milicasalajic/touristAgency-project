@@ -14,11 +14,6 @@ namespace TouristAgency.Model
         public string PhoneNumber { get; set; }
         public string UserPhoto { get; set; }
         public Role Role { get; set; }
-
-
-
-
-        
         
 
 
