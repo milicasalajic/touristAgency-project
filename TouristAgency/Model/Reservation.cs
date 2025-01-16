@@ -4,7 +4,7 @@ namespace TouristAgency.Model
 {
     public class Reservation
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public TouristPackage TouristPackage { get; set; }
         public Tourist Tourist { get; set; }
         public int BedCount { get; set; }

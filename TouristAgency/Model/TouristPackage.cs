@@ -2,7 +2,7 @@
 {
     public class TouristPackage
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public int Duration { get; set; }
@@ -18,7 +18,6 @@
         public ICollection<Trip> Trips { get; set; }
         public Organizer Organizer { get; set; }
         public ICollection<Tourist> Tourists { get; set; }
-        public Reservation Reservation { get; set; }
         public Transportation Transportation { get; set; }
         public double BasePrice { get; set; } // Osnovna cena paketa
 

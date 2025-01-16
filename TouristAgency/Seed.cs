@@ -65,11 +65,43 @@ namespace TouristAgency
                         HotelImages = new List<string> { "han3.jpg", "han4.jpg" }
                     }
                 };
+                var tourists = new List<Tourist>
+                {
+                    new Tourist
+                    {
+                        Name = "Nikola",
+                        LastName = "Jokic",
+                        UserName = "joker",
+                        Email = "jok@example.com",
+                        PhoneNumber = "123456789",
+                        UserPhoto = "akdh.jpg",
+                        Role= Role.Tourist,
+                        Password="nik",
+                        reservations = new List<Reservation>()
+
+                    }
+                };
+                var organizers = new List<Organizer>
+                {
+                    new Organizer
+                    {
+
+                        Name = "Mila",
+                        LastName = "Balic",
+                        UserName = "mila12",
+                        Email = "mila@example.com",
+                        PhoneNumber = "987652221",
+                        UserPhoto = "akdh.jpg",
+                        Role= Role.Organizer,
+                        Password="lozinka123"
+                    }
+                };
 
                 var touristPackages = new List<TouristPackage>
                 {
                     new TouristPackage
                     {
+                        Organizer=organizers[0],
                         Name = "Japan i Kina",
                         Description = "Otkrijte magiju Dalekog Istoka kroz nezaboravan put u Japan i Kinu!" +
                             " Posetite moderne metropole poput Tokija i Šangaja, istražite mistične hramove," +
@@ -116,6 +148,7 @@ namespace TouristAgency
                     },
                     new TouristPackage
                     {
+                        Organizer=organizers[0],
                         Name = "Zapadni Karibi",
                         Description = "Krstarite Karibima i posetite Majami, Honduras, Meksiko i privatno Royal Caribbean ostrvo " +
                             "na Bahamima sa organizovanim povratnim avio prevozom, svim transferima," +
@@ -137,6 +170,7 @@ namespace TouristAgency
                     },
                      new TouristPackage
                     {
+                         Organizer=organizers[0],
                         Name = "Hanioti, Grcka",
                         Description = "Hanioti je poznato grčko letovalište smešteno na unutrašnjoj strani poluostrva Kasandra. Nalazi se na oko 105 km južno od Soluna, između takođe popularnih letovališta Pefkohori i Polihrono  i predstavlja jedno od najlepših turističkih mesta prvog prsta Halkidikija.",
                         Duration = 12,
@@ -172,6 +206,7 @@ namespace TouristAgency
                     },
                       new TouristPackage
                     {
+                        Organizer=organizers[0],
                         Name = "Toskana, Italija",
                         Description = " Mesto gde se krije sunce. Savršeno izvajani predeli puni raznobojne flore pripadaju jednom od najmirnijih i najčešće posećenih predela u samoj Italiji. Domaćinske kućice u širokim razmacima bruje od priča starih Italijana, smeha, igre i naravno nezaobilaznog kuvanja. Ova predivna regija svojim mirisnim čempresima priča priče datirane hiljadama godina unazad. ",
                         Duration = 6,
@@ -213,6 +248,7 @@ namespace TouristAgency
                     },
                         new TouristPackage
                     {
+                        Organizer=organizers[0],
                         Name = "Atina, Grcka",
                         Description = "Koracima stare civilizacije tamo gde su bile legende istorije, koje opeva Homer, kuda je Odisej plovio, tamo gde su ispisane čitave stranice svetske istorije, tamo gde su bogovi živeli i gde mitovi i danas žive...",
                         Duration = 6,
@@ -242,35 +278,7 @@ namespace TouristAgency
                     }
                 };
 
-                var tourists = new List<Tourist>
-                {
-                    new Tourist
-                    {
-                        Name = "Nikola",
-                        LastName = "Jokic",
-                        UserName = "joker",
-                        Email = "jok@example.com",
-                        PhoneNumber = "123456789",
-                        UserPhoto = "akdh.jpg",
-                        Role= Role.Tourist,
-                        reservations = new List<Reservation>
-                        {
-                            new Reservation
-                            {
-                                TouristPackage = touristPackages[0],
-                                BedCount = 2,
-                                ReservationDate = DateTime.Now,
-                                Name = "Nikola",
-                                LastName = "Jokic",
-                                Email = "jok@example.com",
-                                PhoneNumber = "123456789",
-                                JMBG = "0101999123456",
-                                PaymentMethod = PaymentMethod.PaymentCard,
-                                DiscountCode = "SUM12"
-                            }
-                        }
-                    }
-                };
+               
                 var reservations = new List<Reservation>
                 {
                     new Reservation
@@ -303,20 +311,7 @@ namespace TouristAgency
 
                 };
 
-                var organizers = new List<Organizer>
-                {
-                    new Organizer
-                    {
-                        Name = "Mila",
-                        LastName = "Balic",
-                        UserName = "mila12",
-                        Email = "mila@example.com",
-                        PhoneNumber = "987652221",
-                        UserPhoto = "akdh.jpg",
-                        Role= Role.Organizer
-                    }
-                };
-
+              
                 dataContext.Categories.AddRange(categories);
                 dataContext.Destinations.AddRange(destinations);
                 dataContext.TouristPackages.AddRange(touristPackages);

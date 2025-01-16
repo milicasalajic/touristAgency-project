@@ -10,6 +10,19 @@ namespace TouristAgency.Data
         {
             
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Konfiguracija veze između TouristPackage i Organizer
+            modelBuilder.Entity<TouristPackage>()
+                .HasOne(tp => tp.Organizer)
+                .WithMany(o => o.touristPackages)
+        
+                .OnDelete(DeleteBehavior.NoAction); // Sprečava kaskadno brisanje
+
+          
+            base.OnModelCreating(modelBuilder);
+        }
+
         // navodi sve tabele koje zelis
         public DbSet<User> Users { get; set; }
         public DbSet<TouristPackage> TouristPackages { get; set; }
@@ -20,6 +33,7 @@ namespace TouristAgency.Data
         public DbSet<Trip> Trips { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
+       
 
     }
 }
