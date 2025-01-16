@@ -8,7 +8,7 @@
         public string Place { get; set; }
         public string Hotel { get; set; }
         public List<string> HotelImages { get; set; } = new List<string>();
-        public TouristPackage Package { get; set; }
+        public TouristPackage TouristPackage { get; set; }
 
     }
 }
