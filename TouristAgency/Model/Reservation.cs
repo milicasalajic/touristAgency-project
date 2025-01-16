@@ -7,19 +7,23 @@ namespace TouristAgency.Model
         public int Id { get; set; }
         public TouristPackage TouristPackage { get; set; }
         public Tourist Tourist { get; set; }
-        public int NumberOfTourists { get; set; }
+        public int BedCount { get; set; }
         public DateTime ReservationDate { get; set; }
-        public double Price { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
 
         public string JMBG { get; set; }
-        public string PlaceOfEntryIntoTheBus { get; set; }
         public List<string> otherEmails { get; set; } = new List<string>();
         public PaymentMethod PaymentMethod { get; set; }
         public string DiscountCode { get; set; }
+        public double FinalPrice { get; set; } // Krajnja cena
+        public void CalculateFinalPrice()
+        {
+            double roomPrice = TouristPackage.GetRoomPrice(BedCount);
+            FinalPrice = roomPrice;
+        }
 
 
 
