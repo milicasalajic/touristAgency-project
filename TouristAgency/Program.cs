@@ -1,6 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using TouristAgency;
+using TouristAgency.Controllers;
 using TouristAgency.Data;
+using TouristAgency.Repositories;
+using TouristAgency.RepositoryInterfaces;
+using TouristAgency.ServiceInterfaces;
+using TouristAgency.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +20,13 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase"));
 });
 
+
+// Registracija servisa i repozitorijuma
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(); // Repozitorijum za Category
+builder.Services.AddScoped<ICategoryService, CategoryService>(); // Servis za Category
+builder.Services.AddScoped<CategoryController>(); // Kontroler za Category
+
+
 var app = builder.Build();
 
 // nakon dodavanja builder seed dodaj ovo, popunjava bazu podataka pocetnim podacima
@@ -22,7 +34,9 @@ var app = builder.Build();
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
     SeedData(app);
 
-                // iHost da bi se dobio pristup bp
+
+
+// iHost da bi se dobio pristup bp
 void SeedData(IHost app) 
 {   // uzima servis za kreiranje scopa (rad s servisima koji imaju kratak vek trajanja npr bp)
     var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
@@ -54,5 +68,6 @@ app.UseAuthorization();
 
 
 app.MapRazorPages();
+app.MapControllers(); // Mapiranje ruta kontrolera
 
 app.Run();

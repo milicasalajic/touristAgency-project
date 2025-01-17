@@ -21,7 +21,9 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="DTO\Requests\" />
     <Folder Include="Migrations\" />
+    <Folder Include="RequestModel\" />
   </ItemGroup>
 
 </Project>
