@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TouristAgency.DTO.Responses;
+using TouristAgency.Model;
 using TouristAgency.ResponseModel;
 using TouristAgency.ServiceInterfaces;
 using TouristAgency.Services;
@@ -34,6 +36,38 @@ namespace TouristAgency.Controllers
 
             });
             return Ok(response);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTouristPackageById(Guid id)
+        {
+            var package = await _touristPackageService.FindByIdAsync(id);
+            GetSingleTouristPackageResponse packageResponse = new GetSingleTouristPackageResponse()
+            {
+                Id = package.Id,
+                Name = package.Name,
+                Description = package.Description,
+                Duration = package.Duration,
+                DateOfDeparture = package.DateOfDeparture,
+                ReturnDate = package.ReturnDate,
+                Images = package.Images ?? new List<string>(), // Ako su slike null, koristi praznu listu
+                Schedule = package.Schedule,
+                PriceIncludes = package.PriceIncludes,
+                PriceDoesNotIncludes = package.PriceDoesNotIncludes,
+                Category = package.Category,
+                Destination = package.Destination,
+                // Trips = package.Trips ?? new List<Trip>(),
+                Trips = package.Trips?.Select(trip => new TripForTouristPackageDTO
+                {
+                    Id = trip.Id,
+                    Name = trip.Name,
+                    Description = trip.Description,
+                }).ToList(),
+               
+                Transportation = package.Transportation,
+                BasePrice = package.BasePrice,
+                RoomPrices = package.RoomPrices ?? new List<double>() // Ako je null, koristi praznu listu
+            };
+            return Ok(packageResponse);
         }
     }
 }

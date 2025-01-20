@@ -30,5 +30,23 @@ namespace TouristAgency.Repositories
                 throw new DataRetrievalException<TouristPackage>();
             }
         }
+        public async Task<TouristPackage> FindByIdAsync(Guid id)
+        {
+            try
+            {
+                return await _table
+                     .Include(tp => tp.Category)
+                     .Include(tp => tp.Destination)
+                     .Include(tp => tp.Trips)
+                    // .Include(tp => tp.Organizer)
+                     //.Include(tp => tp.Tourists) // Ovo ostaje, iako lista može biti prazna
+                     //.Include(tp => tp.Transportation)
+                     .FirstOrDefaultAsync(tp => tp.Id == id);
+            }
+            catch (Exception)
+            {
+                throw new DataRetrievalException<TouristPackage>();
+            }
+        }
     }
 }

@@ -31,6 +31,8 @@ builder.Services.AddScoped<ITouristPackageRepository, TouristPackageRepository>(
 builder.Services.AddScoped<ITouristPackageService, TouristPackageService>(); // Servis za Category
 builder.Services.AddScoped<TouristPackageController>(); // Kontroler za Category
 
+
+
 var app = builder.Build();
 
 // nakon dodavanja builder seed dodaj ovo, popunjava bazu podataka pocetnim podacima
