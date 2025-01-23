@@ -15,10 +15,10 @@ namespace TouristAgency.Model
         public string PhoneNumber { get; set; }
 
         public string JMBG { get; set; }
-        public List<string> otherEmails { get; set; } = new List<string>();
+        public List<string> OtherEmails { get; set; } = new List<string>();
         public PaymentMethod PaymentMethod { get; set; }
         public string DiscountCode { get; set; }
-        public double FinalPrice { get; set; } // Krajnja cena
+        public double? FinalPrice { get; set; } // Krajnja cena
         public void CalculateFinalPrice()
         {
             double roomPrice = TouristPackage.GetRoomPrice(BedCount);

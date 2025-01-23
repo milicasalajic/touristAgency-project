@@ -30,5 +30,27 @@ namespace TouristAgency.Repositories
                 throw new DataRetrievalException<Category>();
             }
         }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetTouristPackagesByCategoryIdAsync(Guid categoryId)
+        {
+            try
+            {
+                return await _table
+                    .Where(c => c.Id == categoryId)
+                    .SelectMany(c => c.TouristPackages)
+                    .Select(tp => new AllTouristPackagesDTO
+                    {
+                        Id = tp.Id,
+                        Name = tp.Name,
+                        ReturnDate = tp.ReturnDate,
+                        DateOfDeparture = tp.DateOfDeparture,   
+                        BasePrice = tp.BasePrice
+                    })
+                    .ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw new EntityNotFoundException<TouristPackage>();
+            }
+        }
     }
 }

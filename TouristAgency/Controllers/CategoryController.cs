@@ -31,5 +31,21 @@ namespace TouristAgency.Controllers
             });
             return Ok(response);
         }
+
+        [HttpGet("{id}/packages")]
+        public async Task<IActionResult> GetTouristPackagesByCategoryId(Guid id)
+        {
+            var packages = await _categoryService.GetTouristPackagesByCategoryIdAsync(id);
+            var response = packages.Select(p => new GetTouristPackagesResponse
+            {
+                Id = p.Id,
+                Name = p.Name,
+                DateOfDeparture = p.DateOfDeparture,
+                ReturnDate = p.ReturnDate,
+                BasePrice = p.BasePrice,
+            });
+            
+            return Ok(response);
+        }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TouristAgency")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87ffcb7650045938090bb9639015fdfb91ace27a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7254fbcaa288ac227b08806311b352f129c45ec2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TouristAgency")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TouristAgency")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

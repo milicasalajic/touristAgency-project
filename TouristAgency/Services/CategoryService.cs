@@ -17,5 +17,11 @@ namespace TouristAgency.Services
             var categoryDtos = await _categoryRepository.GetAllAsync();
             return categoryDtos;
         }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetTouristPackagesByCategoryIdAsync(Guid categoryId)
+        {
+           
+            var packagesDto = await _categoryRepository.GetTouristPackagesByCategoryIdAsync(categoryId);
+            return packagesDto;
+        }
     }
 }

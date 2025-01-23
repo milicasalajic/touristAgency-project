@@ -69,5 +69,50 @@ namespace TouristAgency.Controllers
             };
             return Ok(packageResponse);
         }
+        [HttpGet("filter-by-price-ascending")]
+        public async Task<IActionResult> GetPackagesByPriceAscending()
+        {
+            var packages = await _touristPackageService.GetPackagesOrderedByPriceAsync();
+
+            var response = packages.Select(p => new GetTouristPackagesResponse
+            {
+                Id = p.Id,
+                Name = p.Name,
+                DateOfDeparture = p.DateOfDeparture,
+                ReturnDate = p.ReturnDate,
+                BasePrice = p.BasePrice,
+            });
+
+            return Ok(response);
+        }
+        [HttpGet("filter-by-price-descending")]
+        public async Task<IActionResult> GetPackagesByPriceDescending()
+        {
+            var packages = await _touristPackageService.GetPackagesOrderedByPriceDescendingAsync();
+
+            var response = packages.Select(p => new GetTouristPackagesResponse
+            {
+                Id = p.Id,
+                Name = p.Name,
+                DateOfDeparture = p.DateOfDeparture,
+                ReturnDate = p.ReturnDate,
+                BasePrice = p.BasePrice,
+            });
+
+            return Ok(response);
+        }
+        [HttpGet("filter-by-date-range")]
+        public async Task<IActionResult> GetPackagesByDateRange(DateTime startDate, DateTime endDate)
+        {
+            if (startDate > endDate)
+            {
+                return BadRequest("Start date cannot be later than end date.");
+            }
+
+            var packages = await _touristPackageService.GetPackagesByDateRangeAsync(startDate, endDate);
+            return Ok(packages);
+        }
+
+
     }
 }

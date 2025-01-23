@@ -61,6 +61,18 @@ namespace TouristAgency.Services
             };
             return touristPackageDTO;
         }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceAsync()
+        {
+            return await _touristPackageRepository.GetPackagesOrderedByPriceAsync();
+        }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceDescendingAsync()
+        {
+            return await _touristPackageRepository.GetPackagesOrderedByPriceDescendingAsync();
+        }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesByDateRangeAsync(DateTime startDate, DateTime endDate)
+        {
+            return await _touristPackageRepository.GetPackagesByDateRangeAsync(startDate, endDate);
+        }
 
     }
 }

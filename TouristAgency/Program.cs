@@ -31,6 +31,11 @@ builder.Services.AddScoped<ITouristPackageRepository, TouristPackageRepository>(
 builder.Services.AddScoped<ITouristPackageService, TouristPackageService>(); // Servis za Category
 builder.Services.AddScoped<TouristPackageController>(); // Kontroler za Category
 
+// Registracija servisa i repozitorijuma
+builder.Services.AddScoped<IReservationRepository, ReservationRepository>(); // Repozitorijum za Category
+builder.Services.AddScoped<IReservationService, ReservationService>(); // Servis za Category
+builder.Services.AddScoped<ReservationController>(); // Kontroler za Category
+
 
 
 var app = builder.Build();

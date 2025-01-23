@@ -7,5 +7,8 @@ namespace TouristAgency.RepositoryInterfaces
     {
         Task<IEnumerable<AllTouristPackagesDTO>> GetAllAsync();
         Task<TouristPackage> FindByIdAsync(Guid Id);
+        Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceAsync();
+        Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceDescendingAsync();
+        Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesByDateRangeAsync(DateTime startDate, DateTime endDate);
     }
 }

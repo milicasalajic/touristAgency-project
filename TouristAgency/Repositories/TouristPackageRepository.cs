@@ -48,5 +48,54 @@ namespace TouristAgency.Repositories
                 throw new DataRetrievalException<TouristPackage>();
             }
         }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceAsync()
+        {
+            try
+            {
+                return await _table
+                    .OrderBy(p => p.BasePrice) // Sortiranje po osnovnoj ceni (rastuce)
+                    .Select(item => new AllTouristPackagesDTO
+                    {
+                        Id = item.Id,
+                        Name = item.Name,
+                        DateOfDeparture = item.DateOfDeparture,
+                        ReturnDate = item.ReturnDate,
+                        BasePrice = item.BasePrice,
+                    })
+                    .ToListAsync();
+            }
+            catch (Exception)
+            {
+                throw new DataRetrievalException<TouristPackage>();
+            }
+        }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesOrderedByPriceDescendingAsync()
+        {
+            return await _table
+                .OrderByDescending(p => p.BasePrice) // Sortiranje po ceni opadajuće
+                .Select(item => new AllTouristPackagesDTO
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    DateOfDeparture = item.DateOfDeparture,
+                    ReturnDate = item.ReturnDate,
+                    BasePrice = item.BasePrice,
+                })
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<AllTouristPackagesDTO>> GetPackagesByDateRangeAsync(DateTime startDate, DateTime endDate)
+        {
+            return await _table
+                .Where(p => p.DateOfDeparture >= startDate && p.ReturnDate <= endDate) // Filtriraj po opsegu datuma
+                .Select(item => new AllTouristPackagesDTO
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    DateOfDeparture = item.DateOfDeparture,
+                    ReturnDate = item.ReturnDate,
+                    BasePrice = item.BasePrice,
+                })
+                .ToListAsync();
+        }
     }
 }
