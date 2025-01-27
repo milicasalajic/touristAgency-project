@@ -145,4 +145,5 @@ D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency
 D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency\obj\Debug\net8.0\TouristAgency.csproj.AssemblyReference.cache
 D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency\obj\Debug\net8.0\TouristAgency.sourcelink.json
 D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency\obj\Debug\net8.0\TouristA.40D50E35.Up2Date
+D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Materijali_i_projekti_za_faks\samostalni_projekti\TouristAgency\TouristAgency\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

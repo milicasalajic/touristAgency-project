@@ -312,12 +312,12 @@ namespace TouristAgency
                 };
 
               
-                dataContext.Categories.AddRange(categories);
-                dataContext.Destinations.AddRange(destinations);
-                dataContext.TouristPackages.AddRange(touristPackages);
-                dataContext.Tourists.AddRange(tourists);
-                dataContext.Organizers.AddRange(organizers);
-              
+                //dataContext.Categories.AddRange(categories);
+                //dataContext.Destinations.AddRange(destinations);
+                //dataContext.TouristPackages.AddRange(touristPackages);
+                //dataContext.Tourists.AddRange(tourists);
+                //dataContext.Organizers.AddRange(organizers);
+                dataContext.Reservations.AddRange(reservations);
                 dataContext.SaveChanges();
             }
 

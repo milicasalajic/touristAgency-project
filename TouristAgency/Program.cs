@@ -1,5 +1,10 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.IdentityModel.Tokens;
 using TouristAgency;
+using TouristAgency.Configurations;
 using TouristAgency.Controllers;
 using TouristAgency.Data;
 using TouristAgency.Repositories;
@@ -20,6 +25,30 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MyDatabase"));
 });
 
+builder.Services.AddSingleton<JwtTokenService>();
+builder.Services.AddAuthentication(cfg =>
+{
+    cfg.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    cfg.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    cfg.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.RequireHttpsMetadata = false;
+    x.SaveToken = false;
+    x.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(
+            Encoding.UTF8
+            .GetBytes(builder.Configuration["ApplicationSettings:JWT_Secret"])
+        ),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero
+    };
+});
+
+
 
 // Registracija servisa i repozitorijuma
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>(); // Repozitorijum za Category
@@ -35,6 +64,10 @@ builder.Services.AddScoped<TouristPackageController>(); // Kontroler za Category
 builder.Services.AddScoped<IReservationRepository, ReservationRepository>(); // Repozitorijum za Category
 builder.Services.AddScoped<IReservationService, ReservationService>(); // Servis za Category
 builder.Services.AddScoped<ReservationController>(); // Kontroler za Category
+
+builder.Services.AddScoped<IUserRepository, UserRepository>(); // Repozitorijum za Category
+builder.Services.AddScoped<IUserService, UserService>(); // Servis za Category
+builder.Services.AddScoped<UserController>(); // Kontroler za Category
 
 
 

@@ -32,8 +32,5 @@ namespace TouristAgency.Data
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<Trip> Trips { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-
-       
-
     }
 }

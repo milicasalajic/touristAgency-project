@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+﻿using System.Diagnostics.CodeAnalysis;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 
 namespace TouristAgency.Model
 {
@@ -6,7 +7,8 @@ namespace TouristAgency.Model
     {
         public Guid Id { get; set; }
         public TouristPackage TouristPackage { get; set; }
-        public Tourist Tourist { get; set; }
+        [AllowNull]
+        public Tourist? Tourist { get; set; }
         public int BedCount { get; set; }
         public DateTime ReservationDate { get; set; }
         public string Name { get; set; }

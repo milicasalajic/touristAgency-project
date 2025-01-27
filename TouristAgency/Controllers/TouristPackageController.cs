@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TouristAgency.DTO.Responses;
-using TouristAgency.Model;
 using TouristAgency.ResponseModel;
 using TouristAgency.ServiceInterfaces;
-using TouristAgency.Services;
 
 namespace TouristAgency.Controllers
 {
@@ -62,7 +60,7 @@ namespace TouristAgency.Controllers
                     Name = trip.Name,
                     Description = trip.Description,
                 }).ToList(),
-               
+
                 Transportation = package.Transportation,
                 BasePrice = package.BasePrice,
                 RoomPrices = package.RoomPrices ?? new List<double>() // Ako je null, koristi praznu listu
@@ -112,7 +110,5 @@ namespace TouristAgency.Controllers
             var packages = await _touristPackageService.GetPackagesByDateRangeAsync(startDate, endDate);
             return Ok(packages);
         }
-
-
     }
 }
