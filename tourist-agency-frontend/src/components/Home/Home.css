@@ -1,0 +1,48 @@
+/* Resetovanje marginu i paddinga iz body */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Div koji sadrži sliku */
+  .main-image {
+    width: 100%; /* Celi prostor za sliku */
+    height: 100%; /* Manja visina (40% visine ekrana) */
+    display: flex;
+    justify-content: center; /* Centriranje slike horizontalno */
+    align-items: center; /* Centriranje slike vertikalno */
+  }
+  
+  /* Slika koja će biti 80% širine i imaće manju visinu */
+  .main-image img {
+    width: 100%; /* Slika zauzima 80% širine */
+    height: auto; /* Održava proporcije slike */
+  }
+
+  .profile-button-container {
+    display: flex;
+    justify-content: center; /* Centriranje horizontalno */
+    margin-top: 20px; /* Razmak od gornjeg dela */
+  }
+  
+  .profile-button {
+    background-color: #ff9800; /* Narandžasta boja */
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px; /* Padding */
+    border: none;
+    border-radius: 8px; /* Zaobljeni uglovi */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .profile-button:hover {
+    background-color: #e68900; /* Tamnija narandžasta na hover */
+    transform: scale(1.05); /* Blago povećanje */
+  }
+  
+  .profile-button:active {
+    background-color: #cc7700; /* Još tamnija boja kada se klikne */
+    transform: scale(0.98);
+  }
+  

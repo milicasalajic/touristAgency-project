@@ -1,0 +1,52 @@
+.myProfile {
+  width: 400px;
+  margin-left: 120px; 
+  margin-top: 120px;
+  padding: 25px;
+  background: #f2f2f2; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #ff6600; 
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #ff6600; 
+  outline: none;
+}
+
+.myProfile button {
+  background-color: #ff6600;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.myProfile button:hover {
+  background-color: #e65c00; 
+}
+
+.myProfile button:focus {
+  outline: none;
+}
