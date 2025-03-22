@@ -2,6 +2,8 @@
 {
     public enum Transportation
     {
-        Airplane, Bus
+        Bus = 0,
+        Airplane = 1
+        
     }
 }

@@ -15,7 +15,7 @@ namespace TouristAgency.ResponseModel
         public List<string> OtherEmails { get; set; } = new List<string>();
         public PaymentMethod PaymentMethod { get; set; }
         public string DiscountCode { get; set; }
-        public double FinalPrice { get; set; } // Krajnja cena
+        public double FinalPrice { get; set; } 
         public DateTime ReservationDate { get; set; }
     }
 }

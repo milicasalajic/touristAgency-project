@@ -94,6 +94,21 @@ namespace TouristAgency
                         UserPhoto = "akdh.jpg",
                         Role= Role.Organizer,
                         Password="lozinka123"
+                    },
+                  
+                };
+                var users = new List<User>
+                {
+                    new User
+                    {
+                        Name = "Mirko",
+                        LastName = "Mirkovic",
+                        UserName = "mire",
+                        Email = "mire@example.com",
+                        PhoneNumber = "987652567",
+                        UserPhoto = "slika1.jpg",
+                        Role= Role.Admin,
+                        Password="lozinka123"
                     }
                 };
 
@@ -112,7 +127,7 @@ namespace TouristAgency
                         ReturnDate = new DateTime(2025, 9, 14),
                         BasePrice = 2299,
                         Capacity = 15,
-                        Images = new List<string> { "Japan1.jpg", "Japan2.jpg" },
+                        Images = new List<string> { "Japan.JPG", "Japan2.jpg" },
                         Schedule = "1.DAN - Polazak; 2. DAN - Dolazak u Tokio; obilazak Asakusa kvarta i hrama Senso-ji; 3. DAN - Tokio; poseta Šibuji i Šindžuku; 4. DAN - Tokio; istraživanje Akihabara kvarta i parka Ueno; 5. DAN - Tokio; jednodnevni izlet na Odaibu; 6. DAN - Putovanje u Kjoto; poseta svetištu Fušimi Inari Taiša; 7. DAN - Kjoto; obilazak Kinkaku-džija i Rjoan-džija; 8. DAN - Kjoto; poseta Gion distriktu i hramu Kijomizu-dera; 9. DAN - Putovanje u Osaku; poseta dvorcu Osaka; 10. DAN - Osaka; istraživanje Dotomborija i Šinsaibašija; 11. DAN - Jednodnevni izlet u Himeđi; poseta dvorcu Himeđi; 12. DAN - Povratak kući.",
                         PriceIncludes = "Smestaj, prevoz, hrana, osam obilazaka gratis(: Asakusa district, Sensoji hram," +
                              " Nakamise ulica, Ueno park, Carska palata, Tokyo Metropolitan Government (TMG), Shinjuku district, " +
@@ -158,7 +173,7 @@ namespace TouristAgency
                         ReturnDate = new DateTime(2025, 8, 20),
                         BasePrice = 3899,
                         Capacity = 25,
-                        Images = new List<string> { "karibi1.jpg", "karibi2.jpg" },
+                        Images = new List<string> { "karibi.JPG", "karibi2.jpg" },
                         Schedule = "1DAN - Polazak; 2. DAN - Dolazak u Miami; slobodno vreme za istraživanje grada; 3. DAN - Krstarenje; dan proveden na brodu uživajući u sadržajima i aktivnosti; 4. DAN - Pristanak na Bahamima; poseta Nassau i uživanje na plažama; 5. DAN - Krstarenje; dan na brodu sa opuštanjem i zabavom; 6. DAN - Pristanak u Jamajci; obilazak Montego Bay i uživanje u lokalnim atrakcijama; 7. DAN - Krstarenje; dan proveden na brodu, uživanje u zabavi i wellnessu; 8. DAN - Pristanak u Kajmanovim Ostrvima; istraživanje George Town i uživanje u vodi; 9. DAN - Krstarenje; opuštanje na brodu i uživanje u luksuznoj ponudi; 10. DAN - Povratak u Miami i povratak kući.",
                         PriceIncludes = "Smestaj, prevoz, hrana",
                         PriceDoesNotIncludes = "Medjunarnodno zdravstveno osiguranje, fakultativni izleti,troskovi vadjena vize za putnike koji nisu drzavljani Republike Srbije, doplata za jednokrevetnu sobu",
@@ -178,7 +193,7 @@ namespace TouristAgency
                         ReturnDate = new DateTime(2025, 8, 22),
                         BasePrice = 150,
                         Capacity = 20,
-                        Images = new List<string> { "hanio.jpg", "hanio2.jpg" },
+                        Images = new List<string> { "hanioti.JPG", "hanio2.jpg" },
                         Schedule = "1DAN - Polazak; 2. DAN - Dolazak, smestaj u apartman; 3-11. DAN - individualne aktivnosti; 12. DAN - Povratak;",
                         PriceIncludes = "Smestaj, prevoz",
                         PriceDoesNotIncludes = "Medjunarnodno zdravstveno osiguranje",
@@ -214,7 +229,7 @@ namespace TouristAgency
                         ReturnDate = new DateTime(2025, 8, 16),
                         BasePrice = 150,
                         Capacity = 50,
-                        Images = new List<string> { "tos.jpg", "tos2.jpg" },
+                        Images = new List<string> { "toskana.JPG", "tos2.jpg" },
                         Schedule = "1. DAN - BEOGRAD,2. DAN. - MONTECATINI TERME 3. DAN. - MONTECATINI - SIENA - S. ĐIMINJANO 4. DAN. - MONTECATINI TERME – LUCA - PIZA 5. DAN. - MONTECATINI - FIRENCA 6. DAN - BEOGRAD",
                         PriceIncludes = "Smestaj, prevoz, dorucak",
                         PriceDoesNotIncludes = "Medjunarnodno zdravstveno osiguranje, fakultativni izleti, doplata za jednokrevetnu sobu",
@@ -256,7 +271,7 @@ namespace TouristAgency
                         ReturnDate = new DateTime(2025, 8, 16),
                         BasePrice = 140,
                         Capacity = 50,
-                        Images = new List<string> { "tos.jpg", "tos2.jpg" },
+                        Images = new List<string> { "atina.JPG", "tos2.jpg" },
                         Schedule = "1. DAN BEOGRAD, 2. DAN ATINA,3. DAN ATINA - PELOPONEZ - EPIDAURUS - NAFPLIO - ATINA, 4. DAN ATINA - PIREJ - RT SUNION,5. DAN ATINA - AKROPOLJ, 6. DAN BEOGRAD",
                         PriceIncludes = "Smestaj, prevoz, dorucak",
                         PriceDoesNotIncludes = "Medjunarnodno zdravstveno osiguranje, fakultativni izleti, doplata za jednokrevetnu sobu",

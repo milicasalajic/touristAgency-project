@@ -10,6 +10,8 @@ namespace TouristAgency.ResponseModel
         public DateTime DateOfDeparture { get; set; }
         public DateTime ReturnDate { get; set; }
         public double BasePrice { get; set; }
+        public string FirstImage { get; set; }
+        public Transportation Transportation { get; set; }
 
     }
 }

@@ -71,7 +71,23 @@ builder.Services.AddScoped<UserController>(); // Kontroler za Category
 
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigins", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // Specifikuj samo frontend URL
+              .AllowAnyMethod()  // Dozvoljava sve HTTP metode (GET, POST, PUT, DELETE...)
+              .AllowCredentials()
+              .AllowAnyHeader();  // Dozvoljava bilo koja zaglavlja
+    });
+});
+
+
+
 var app = builder.Build();
+
+
+app.UseCors("AllowOrigins");
 
 // nakon dodavanja builder seed dodaj ovo, popunjava bazu podataka pocetnim podacima
 // proverava argumente pri pokretanju programa
@@ -94,7 +110,6 @@ void SeedData(IHost app)
 }
 
 
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -102,6 +117,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseMiddleware<TouristAgency.Exceptions.ExceptionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

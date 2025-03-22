@@ -15,7 +15,7 @@ namespace TouristAgency.Repositories
         public CategoryRepository(DataContext dataContext) : base(dataContext)
         {
         }
-        public async Task<IEnumerable<AllCategoriesDTO>> GetAllAsync()
+        public async Task<IEnumerable<AllCategoriesDTO>> FindAllAsync()
         {
             try
             {                               //sekejtuj sve stavke iz tabele i za njih kreiraj dto objekat
@@ -30,6 +30,7 @@ namespace TouristAgency.Repositories
                 throw new DataRetrievalException<Category>();
             }
         }
+
         public async Task<IEnumerable<AllTouristPackagesDTO>> GetTouristPackagesByCategoryIdAsync(Guid categoryId)
         {
             try
@@ -43,7 +44,9 @@ namespace TouristAgency.Repositories
                         Name = tp.Name,
                         ReturnDate = tp.ReturnDate,
                         DateOfDeparture = tp.DateOfDeparture,   
-                        BasePrice = tp.BasePrice
+                        BasePrice = tp.BasePrice,
+                        Images = tp.Images,
+                        Transportation = tp.Transportation,
                     })
                     .ToListAsync();
             }
@@ -52,5 +55,61 @@ namespace TouristAgency.Repositories
                 throw new EntityNotFoundException<TouristPackage>();
             }
         }
+        
+        public async Task<Category?> FindByNameAsync(string name)
+        {
+            try
+            {
+                var category = await _table.FirstOrDefaultAsync(x => x.Name == name);
+
+                if (category != null)
+                {
+                    Console.WriteLine($"Found category: {category.Name}");
+                    
+                }
+                return category;
+
+            }
+            catch (Exception)
+            {
+                throw new SingleEntityRetrievalException<Category>();
+            }
+        }
+
+        public async Task<Category?> FindByIdAsync(Guid id)
+        {
+            try
+            {
+                var category = await _table.FirstOrDefaultAsync(x => x.Id == id);
+
+                if (category != null)
+                {
+                    Console.WriteLine($"Found category: {category.Id}");
+
+                }
+                return category;
+
+            }
+            catch (Exception)
+            {
+                throw new SingleEntityRetrievalException<Category>();
+            }
+        }
+
+        public async Task<Category> AddAsync(Category category)
+        {
+            try
+            {
+                await _table.AddAsync(category);
+                await _dataContext.SaveChangesAsync();
+                return category;
+            }
+            catch (Exception)
+            {
+                throw new EntityInsertException<Category>();
+            }
+        }
+
+
     }
 }

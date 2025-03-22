@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using TouristAgency.DTO.Requests;
+using TouristAgency.RequestModel;
 using TouristAgency.ResponseModel;
 using TouristAgency.ServiceInterfaces;
 
@@ -19,10 +22,10 @@ namespace TouristAgency.Controllers
         //async-asihrono, dobro za rad s operacijama koje dugo traju, poput baze podataka
         //IActionResult - razlitice vrste http odgovora
         [HttpGet]
-        public async Task<IActionResult> GetCategories()
+        public async Task<IActionResult> FindCategories()
         {
             //await se koristi kod asihronih metoda, za cekanje rezultata
-            var categories = await _categoryService.GetAllAsync();
+            var categories = await _categoryService.FindAllAsync();
                             //prolazi kroz svaki odgovor iz baze i kreira novi objekat
             var response = categories.Select(p => new GetCategoriesResponse
             {
@@ -43,9 +46,28 @@ namespace TouristAgency.Controllers
                 DateOfDeparture = p.DateOfDeparture,
                 ReturnDate = p.ReturnDate,
                 BasePrice = p.BasePrice,
+                 FirstImage= p.Images[0],
+                Transportation = p.Transportation,
             });
             
             return Ok(response);
+        }
+        [HttpPost("add")]
+        [Authorize(Roles = "Admin, Organizer")]
+        public async Task<IActionResult> AddCategory([FromBody] CreateNewCategoryRequest newCategoryRequest)
+        {
+            CategoryRequestDTO categoryRequestDTO = new CategoryRequestDTO()
+            {
+                Name = newCategoryRequest.Name,
+
+            };
+            var category = await _categoryService.AddCategoryAsync(categoryRequestDTO);
+            CreateNewCategoryResponse response = new CreateNewCategoryResponse()
+            {
+                Name = category.Name,
+            };
+            return Ok(response);
+
         }
     }
 }

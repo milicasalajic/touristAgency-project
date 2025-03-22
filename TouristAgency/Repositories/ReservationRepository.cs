@@ -22,28 +22,24 @@ namespace TouristAgency.Repositories
         {
             try
             {
-                // Dodavanje rezervacije u kontekst baze
-                // await _dataContext.Reservations.AddAsync(reservation);
                 _table.Add(reservation);
-                // Čuvanje promena u bazi
                 await _dataContext.SaveChangesAsync();
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"GRESKA PRILIKOM CUVANJA: {ex.Message}");
                 throw new EntityInsertException<Reservation>();
             }
         }
 
         public async Task<Reservation> CreateReservationAsync(ReservationDTO reservationDTO)
         {
-            // Pronalaženje turističkog paketa na osnovu ID-a
             var touristPackage = await _touristPackageRepository.FindByIdAsync(reservationDTO.TouristPackageId);
             if (touristPackage == null)
             {
                 throw new Exception("Tourist package not found.");
             }
 
-            // Kreiranje nove rezervacije
             var reservation = new Reservation
             {
                 Id = Guid.NewGuid(),
@@ -57,17 +53,30 @@ namespace TouristAgency.Repositories
                 BedCount = reservationDTO.BedCount,
                 ReservationDate = DateTime.Now,
                 PaymentMethod = reservationDTO.PaymentMethod,
-                DiscountCode = reservationDTO.DiscountCode
+                DiscountCode = string.IsNullOrWhiteSpace(reservationDTO.DiscountCode) ? "NO_DISCOUNT" : reservationDTO.DiscountCode
+
             };
 
-            // Izračunavanje finalne cene
             reservation.CalculateFinalPrice();
-
-            // Dodavanje rezervacije u bazu
+            
             await SaveAsync(reservation);
 
             return reservation;
         }
-    }
-   
+
+        public async Task<List<Reservation>> GetReservationsByUserIdAsync(Guid touristId)
+        {
+            return await _dataContext.Reservations
+                                 .Where(r => r.Tourist.UserId == touristId)
+                                 .ToListAsync();
+        }
+
+        public async Task<List<Reservation>> GetReservationsByPackageIdAsync(Guid packageId, Guid organizerId)
+        {
+            return await _dataContext.Reservations
+                .Where(r => r.TouristPackage.Id == packageId && r.TouristPackage.Organizer.UserId == organizerId)
+                .ToListAsync();
+        }
+
+    } 
 }
