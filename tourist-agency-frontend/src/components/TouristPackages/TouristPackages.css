@@ -1,0 +1,430 @@
+.btn-container {
+  display: flex; /* koristi flexbox */
+  justify-content: center;
+  align-items: center; 
+  height: auto;
+}
+.btn-add-package {
+  background-color: #257c39; 
+  color: white; 
+  border: none; /* bez ivica */
+  padding: 10px 20px; /* unutrašnji razmak */
+  font-size: 16px; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+  
+.btn-add-package:hover {
+  background-color: #1d5d2b; 
+}
+
+.package-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background: #fff;
+  position: relative;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1);
+}
+
+.card-img-wrapper {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f7a31d; 
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+.card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; 
+    margin-top: 5px;
+}
+
+.card-divider {
+  border: none;
+  height: 1px;
+  background: #3b8028; 
+  margin: 10px 0;
+  color: #f7a31d;
+}
+.transportation-img {
+  width: 50px;  
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  }
+
+.btn-danger {
+  background-color: orange !important;
+  border-color: darkorange !important;
+  color: white !important;
+  display: block; 
+  width: 100%;  
+  margin-top: 5px;  
+  text-align: center;
+}
+  
+.btn-danger:hover {
+  background-color: darkorange !important;
+   border-color: orangered !important;
+}
+  
+.btn-danger:active {
+  background-color: orangered !important;
+  border-color: red !important;
+}
+
+.modal-r {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding-left: 550px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.modal-dialog-r {
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-in-out; /* Animacija za ulazak modala */
+}
+
+.modal-header-r {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.modal-title-r {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color:#357a45; 
+}
+
+.close-r {
+    position: absolute;
+    top: 0.05px; 
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ff6347;
+    cursor: pointer;
+}
+  
+.close-r:hover {
+    color: #de5239; 
+}
+
+.modal-body-r {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    max-height: 400px;  
+    overflow-y: auto;   /* Omogućava vertikalno skrolovanje */
+}
+
+.modal-body-r ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.modal-body-r li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-footer-r {
+    background-color:  #f7a31d; 
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+  
+.btn-secondary-r {
+    background-color:  #f7a31d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.btn-secondary-r:hover {
+    background-color: #ff4500; 
+}
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.modal-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    padding-left: 550px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+.modal-dialog-edit {
+    max-width: 600px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-in-out; 
+}
+
+.modal-body-edit {
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal-header-edit {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+ 
+.modal-title-edit {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #357a45; 
+}
+
+.close-edit {
+    position: absolute;
+    top: 0.05px; /* Povećajte ovu vrednost kako biste podigli X dugme više */
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ff6347;
+    cursor: pointer;
+}
+  
+.close-edit:hover {
+    color: #de5239; 
+}
+  
+.form-group-edit {
+    margin-bottom: 15px;
+}
+  
+label {
+    font-weight: bold;
+}
+  
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+  
+input[type="date"] {
+    font-family: 'Arial', sans-serif;
+}
+  
+textarea {
+    min-height: 100px;
+}
+  
+select {
+    padding: 8px;
+    background-color: white;
+}
+
+.modal-footer-edit {
+    background-color: #f7a31d; 
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+}
+
+.btn-primary-edit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.btn-primary-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary-edit {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.btn-secondary-edit:hover {
+    background-color: #5a6268; 
+}
+  
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.modal-i {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px; 
+}
+  
+.modal-content-i {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 80vh; 
+    overflow-y: auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+  
+.modal-content-i h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    text-align: center;
+}
+  
+.modal-content-i form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.modal-content-i label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+  
+.modal-content-i input,
+.modal-content-i textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.modal-content-i button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.modal-content-i button[type="submit"] {
+    background: #257c39;
+    color: white;
+}
+  
+.modal-content-i button[type="button"] {
+    background: #f7a31d;
+    color: white;
+}
+  
+.modal-content-i button:hover {
+    opacity: 0.8;
+}
+  

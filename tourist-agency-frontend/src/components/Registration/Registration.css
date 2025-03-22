@@ -1,0 +1,73 @@
+.register-container {
+    display: flex;
+    flex-direction: column; /* Dodajemo ovu liniju da bi input polja išla jedno ispod drugog */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding-left: 680px;
+}
+  
+h1 {
+  color: #2a7a2e; 
+  margin-bottom: 1rem;
+}
+  
+.error {
+  color: #e63946;
+  font-size: 14px;
+    margin-bottom: 10px;
+}
+  
+input {
+  width: 100%;
+  max-width: 350px; /* Ograničenje širine inputa */
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #dfdddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+  
+input:focus {
+  outline: none;
+  border-color: #ff7f0e; /* Narandžasta pri fokusu */
+  box-shadow: 0 0 5px rgba(255, 127, 14, 0.5);
+}
+  
+.register-btn {
+  background-color: #d9832e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+  
+.register-btn:hover {
+  background-color: #e99a4c;
+}
+  
+.message {
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+  
+.message.success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+  
+.message.error {
+  color: #e63946;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

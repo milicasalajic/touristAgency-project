@@ -1,0 +1,21 @@
+.contact-container {
+    background-color: #ffffff;
+    color: rgb(64, 108, 63);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+  }
+  
+  .contact-content p {
+    margin: 5px 0;
+  }
+  
+  .contact-content a {
+    color: #b87b1f;
+    text-decoration: none;
+  }
+  
+  .contact-content a:hover {
+    text-decoration: underline;
+  }
+  

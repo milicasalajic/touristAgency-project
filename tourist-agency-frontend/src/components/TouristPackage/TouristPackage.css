@@ -1,0 +1,208 @@
+.page-container {
+  width: 100%;
+  max-width: 1200px; 
+  padding: 40px;
+  background-color: white; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  margin-left: 30%;
+}
+
+.package-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;
+  margin-top: 80px; 
+}
+
+.package-images {
+  display: flex;
+  flex-direction:row; /* Slike jedna ispod druge */
+  gap: 20px; 
+  align-items: center; 
+}
+
+.package-images img {
+  width: 90%;
+  max-width: 300px; 
+  height: 200px;
+  border-radius: 8px;
+}
+
+.package-summary {
+  display: flex;
+  justify-content: space-between; /* Informacije levo, dugme desno */
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.package-summary .info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.package-summary p {
+  margin: 0;
+}
+
+.package-summary .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: orange; 
+}
+
+.package-summary .transportation-img {
+  width: 30px;
+  height: 30px;
+}
+
+.package-summary .duration {
+  font-size: 16px;
+}
+
+.package-summary .reserve-btn {
+  padding: 10px 20px;
+  background-color: #459d5a; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto; /* Guranje dugmeta skroz desno */
+}
+
+.package-summary .reserve-btn:hover {
+  background-color: #316e3e;
+}
+
+.package-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.package-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.package-header h1 {
+  font-size: 24px;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.package-header p {
+  font-size: 16px;
+  color: #555;
+}
+
+
+.package-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  gap: 15px;
+  width: 100%;
+}
+
+.package-details h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  
+}
+
+.package-details p {
+  font-size: 16px;
+  color: #333;
+}
+.date-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.schedule {
+  text-align: left;
+  width: 100%;
+  background-color: rgba(148, 145, 145, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.price-inclusions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.price-inclusions h3{
+  color: #316e3e;
+}
+.price-inclusions div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-inclusions h3 {
+  margin-bottom: 10px;
+}
+
+.price-inclusions p {
+  margin: 0;
+  position: relative;
+  padding-left: 20px; 
+  text-align: left; 
+}
+
+.price-inclusions p::before {
+  content: "•"; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.destination-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.destination-images img {
+  
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Centriranje liste */
+.package-details ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.package-details ul li {
+  margin-bottom: 15px;
+}
+
+.package-details ul li h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.package-details ul li p {
+  font-size: 14px;
+  color: #555;
+}

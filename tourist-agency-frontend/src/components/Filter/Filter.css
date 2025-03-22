@@ -1,0 +1,76 @@
+.filter-container {
+  max-width: 1000px; /* Širi kontejner */
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff9800, #ff7200);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-container label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.filter-container select {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.filter-container select:hover,
+.filter-container select:focus {
+  background: #f8f9fa;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+}
+
+/* Stilizacija filtera za datum */
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-filter input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+.date-filter input:focus {
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+}
+
+.date-filter button {
+  padding: 10px;
+  background-color: #4a814c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.date-filter button:hover {
+  background-color: #447546;
+}
